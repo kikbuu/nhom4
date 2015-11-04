@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ce741c41-242c-4d0f-b3ba-4f5b2cf99a41" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies>
+      <ReferencedAssembly AssemblyName="Newtonsoft.Json" />
+    </ReferencedAssemblies>
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:23729/ServiceShopBanGiayPro.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServiceShopBanGiayPro.xsd" MetadataType="Schema" ID="8a79f815-6fc0-4ddf-989f-df7f3e1633a0" SourceId="1" SourceUrl="http://localhost:23729/ServiceShopBanGiayPro.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServiceShopBanGiayPro1.xsd" MetadataType="Schema" ID="8bfa6f8d-f6c8-4a33-821a-31717b79bf36" SourceId="1" SourceUrl="http://localhost:23729/ServiceShopBanGiayPro.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServiceShopBanGiayPro2.xsd" MetadataType="Schema" ID="43569226-fd92-405b-b102-9be6847d4f42" SourceId="1" SourceUrl="http://localhost:23729/ServiceShopBanGiayPro.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServiceShopBanGiayPro.wsdl" MetadataType="Wsdl" ID="8f8b3343-cdd7-4209-8657-596237c89530" SourceId="1" SourceUrl="http://localhost:23729/ServiceShopBanGiayPro.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,33 @@
+﻿@model WebMVCApplication.ServiceReferenceShopBanGiayPro.ct_hoadon
+
+@{
+    ViewBag.Title = "Sửa chi tiết hóa đơn";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<a class="tieude-content">Màn hình sửa chi tiết hóa đơn</a>
+<div class="content-left-shopping">
+@using (Html.BeginForm())
+{
+<table border="0" style="width:100%">
+    <tr>
+        <td>ID:</td>
+        <td>@Html.TextBox("txtid", @Html.Raw(Model.id))</td>
+        <td>Mã HD:</td>
+        <td>@Html.TextBox("txtmahd", @Html.Raw(Model.mahd))</td>
+    </tr>
+    <tr>
+        <td>Mã SP:</td>
+        <td>@Html.TextBox("txtmasp", @Html.Raw(Model.masp))</td>
+        <td>Số lượng:</td>
+        <td>@Html.TextBox("txtsoluong", @Html.Raw(Model.soluong))</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><input type="submit" name="Insert" value="Lưu"/></td>
+        <td><input type="reset" name="reset" value="Nhập lại" /></td>
+        <td></td>
+    </tr>
+</table>
+}
+</div>

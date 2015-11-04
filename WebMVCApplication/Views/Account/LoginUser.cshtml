@@ -1,0 +1,53 @@
+﻿@model WebMVCApplication.ServiceReferenceShopBanGiayPro.user
+
+@{
+    Layout = null;
+}
+
+@if (Session["LogedUserFullname"] != null)
+{
+    <text>
+        @Session["LogedUserFullname"].ToString()
+    </text>
+}
+else
+{
+    <div class="content-right-login">
+        @using (Html.BeginForm("CheckLoginUser", "Account", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true)
+
+            if(@ViewBag.Message != null)
+            {
+                <div style="border: 1px solid red">
+                    @ViewBag.Message
+                </div>
+            }
+            <table class="content-right-login-table">
+                <tr>
+                    <td style="color: red; font-size: 20px; font-family: 'Times New Roman';" colspan="2">ĐĂNG NHẬP</td>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr>
+                    <td>@Html.Label("UserName: ")</td>
+                    <td>@Html.TextBoxFor(a => a.username)</td>
+                    <td style="color: red">@Html.ValidationMessageFor(a => a.username)</td>
+                </tr>
+                <tr>
+                    <td>@Html.Label("Password: ")</td>
+                    <td>@Html.PasswordFor(a => a.password)</td>
+                    <td style="color: red">@Html.ValidationMessageFor(a => a.password)</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td colspan="2"><input type="submit" value="Đăng nhập" /><a href="Account/RegisterUser"><input type="button" value="Đăng ký" /></a></td>
+                </tr>
+                <tr>
+                    <td colspan="3">@Html.ActionLink("Quên mật khẩu?","Index","Product")</td>
+                </tr>
+            </table>
+        }
+    </div>
+}

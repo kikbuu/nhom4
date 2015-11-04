@@ -1,0 +1,41 @@
+﻿@model IEnumerable<WebMVCApplication.ServiceReferenceShopBanGiayPro.hoadon>
+
+@{
+    ViewBag.Title = "Đơn hàng đã mua";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="tieude-content">Đơn hàng đã mua</div>
+@using (Html.BeginForm())
+{
+<table border="1" style="width:100%">
+    <tr>
+        <td>ID</td>
+        <td>Mã hóa đơn</td>
+        <td>Ngày mua</td>
+        <td>Đã giao</td>
+        <td colspan="2">Tác vụ</td>
+    </tr>
+    @{foreach (var item in Model)
+      {
+        <tr>
+            <td>@Html.Raw(item.id)</td>
+            <td>@Html.Raw(item.mahd)</td>
+            <td>@Html.Raw(item.ngaymua.Value.ToShortDateString())</td>
+            <td>@Html.Raw(item.hoanthanh)</td>
+            @{if (item.hoanthanh == true)
+              {
+                    <td>@Html.ActionLink("Chi tiết", "ChiTietDonHang", "Product", new { mhd = item.mahd.Trim() }, null)</td>
+                    <td></td>
+              }
+              else
+              {
+                    <td>@Html.ActionLink("Chi tiết", "ChiTietDonHang", "Product", new { mhd = item.mahd.Trim() }, null)</td>
+                    <td>@Html.ActionLink("Xóa", "XoaDonHang", "Product", new { mhd = item.mahd.Trim() }, null)</td>
+               }
+            }
+        </tr>
+        }
+    }
+</table>
+}

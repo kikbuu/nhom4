@@ -1,0 +1,67 @@
+﻿@model IEnumerable<WebMVCApplication.ServiceReferenceShopBanGiayPro.sanpham>
+@{
+    ViewBag.Title = "TimKiemNangCao";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="tieude-content">Tìm kiếm nâng cao</div>
+<div class="box-pro-home-category">
+<div class="box-pro-home-category-body">
+<div style="margin: 10px 0px 0px 0px;">
+    <div class="title">TÌM KIẾM SẢN PHẨM</div>
+    <div class="show" style="padding-top:10px; padding-bottom: 6px;">
+        @using (Html.BeginForm("TimKiemNangCao", "Product"))
+        {
+            <form name="frmTimKiem" method="get">
+        
+            @{Html.RenderAction("DSLoaiTimKiem", "Product");}
+
+            <br>
+            <br>
+            <select name="giatu" style="height:20px;width:200px;">
+                <option value="0">-Giá từ-</option>
+                <option value="1000000">1 triệu đ</option>
+                <option value="3000000">3 triệu đ</option>
+                <option value="5000000">5 triệu đ</option>
+                <option value="10000000">10 triệu đ</option>
+
+            </select>
+            <br>
+            <br>
+            <select name="giaden" style="height:20px;width:200px;">
+                <option value="0">-Giá đến-</option>
+                <option value="3000000">3 triệu đ</option>
+                <option value="5000000">5 triệu đ</option>
+                <option value="7000000">7 triệu đ</option>
+                <option value="100000000">Trên 10 triệu đ</option>
+
+            </select>
+            <br>
+            <br>
+            <input type="hidden" name="TKnangcao" />
+            <input type="image" src="~/Images/button_timkiem.jpg">
+            </form>
+        }
+    </div>
+<div style="border: 1px solid red;">
+@if(@Model != null)
+{
+    foreach (var item in Model)
+    {
+        <div class="item-pro-home">
+            <div class="box-img-pro-home">
+            <a href="/Product/Detail/@Html.Raw(item.masp)">
+                <img src="@Html.Raw(item.hinh)"/>
+            </a>
+        </div>
+        <a href="Product/Detail/" target="_blank\" >@Html.ActionLink(item.tensp, "Detail", "Product", new { id = item.masp.Trim() }, null)</a>
+        <p>Giá: @string.Format("{0:0,0 VNĐ}", item.gia).Replace(",", ".")</p>
+        <button name="chitiet" value="Chi tiết">@Html.ActionLink("Chi tiết", "Detail", "Product", new { id = item.masp.Trim() }, null)</button>
+        <button name="chonmua" value="Chọn mua">@Html.ActionLink("Chọn mua", "AddToCart", "Shopping", new { id = item.masp.Trim(), gia = item.gia }, null)</button>
+        </div>
+    }
+}
+</div>
+</div>
+</div>
+</div>

@@ -1,0 +1,28 @@
+﻿@model IEnumerable<WebMVCApplication.ServiceReferenceShopBanGiayPro.sanpham>
+
+@{
+    ViewBag.Title = "TKnangcao";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="tieude-content">Kết quả tìm kiếm nâng cao</div>
+<div class="box-pro-home-category">
+<div class="box-pro-home-category-body">
+@{foreach (var item in Model)
+    {
+        <div class="item-pro-home">
+            <div class="box-img-pro-home">
+            <a href="/Product/Detail/@Html.Raw(item.masp)">
+                <img src="@Html.Raw(item.hinh)"/>
+            </a>
+        </div>
+        <a href="Product/Detail/" target="_blank\" >@Html.ActionLink(item.tensp, "Detail", "Product", new { id = item.masp.Trim() }, null)</a>
+        <p>Giá: @string.Format("{0:0,0 VNĐ}", item.gia).Replace(",", ".")</p>
+        <button name="chitiet" value="Chi tiết">@Html.ActionLink("Chi tiết", "Detail", "Product", new { id = item.masp.Trim() }, null)</button>
+        <button name="chonmua" value="Chọn mua">@Html.ActionLink("Chọn mua", "AddToCart", "Shopping", new { id = item.masp.Trim(), gia = item.gia }, null)</button>
+        </div>
+    }
+}
+<div class="box-pro-home-category-trang">@{Html.RenderAction("PhanTrang", "PageList", new { currentpage = "Product/Category?id=" + @ViewBag.MaLoai, totalpages = ViewBag.TotalPages });}</div>
+</div>
+</div>

@@ -1,0 +1,17 @@
+﻿@model IEnumerable<WebMVCApplication.ServiceReferenceShopBanGiayPro.loai>
+@{
+    Layout = null;
+}
+<div id="ddtopmenubar" class="mattblackmenu" style="background: #40a0ca; max-height: 31px; height: 31px;">
+    <ul>
+        <li><a href="/">Home</a></li>
+        @{foreach(var item in Model)
+            {
+                <li>@Html.ActionLink(item.ten, "Category", "Product", new { id = item.maloai.Trim() }, null)</li>
+            }
+        }
+        <li style="float: right;">
+            @{Html.RenderAction("Search", "Product");}
+        </li>
+    </ul>
+</div>

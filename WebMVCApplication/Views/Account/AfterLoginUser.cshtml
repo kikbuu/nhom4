@@ -1,0 +1,24 @@
+﻿@model WebMVCApplication.ServiceReferenceShopBanGiayPro.user
+@{
+    Layout = null;
+}
+
+<div class="content-right-login">
+    <p style="color: red; font-size: 20px; font-family: 'Times New Roman';">ĐĂNG NHẬP</p><br />
+    <img class="content-right-login-img" src="@Session["LogedUserImages"].ToString()" />
+    <br />
+    <a style="text-align:center; color: blue;">Xin chào: </a>
+    <a style="text-align:center; color: red;">
+    @if (Session["LogedUserFullname"] != null)
+    {
+        <text>
+            @Session["LogedUserFullname"].ToString()
+        </text>
+    }
+    </a>
+    <br />
+    <button value="Logout" name="Logout">@Html.ActionLink("Logout", "LogoutUser")</button>
+    <button value="Profile" name="Profile">@Html.ActionLink("Profile","ProfileUser", new { id = @Session["LogedUserID"].ToString() }, null)</button>
+    <br />
+    <b>@Html.ActionLink("Hóa đơn đã mua", "DonHangDaMua", "Product", new { user =  Session["LogedUserID"].ToString() }, null)</b>
+</div>

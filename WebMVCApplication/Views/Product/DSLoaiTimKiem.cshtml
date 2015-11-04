@@ -1,0 +1,13 @@
+﻿@model IEnumerable<WebMVCApplication.ServiceReferenceShopBanGiayPro.nhasx>
+@{
+    Layout = null;
+}
+<select name="nhasanxuat" style="height:20px;width:200px;">
+    <option value="0">-Hãng sản xuất-</option>
+
+@foreach (var item in Model)
+{
+    <option value="@item.mansx">@item.ten</option>
+}
+
+</select>

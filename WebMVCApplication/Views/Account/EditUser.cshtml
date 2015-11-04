@@ -1,0 +1,81 @@
+﻿@model WebMVCApplication.ServiceReferenceShopBanGiayPro.user
+@{
+    ViewBag.Title = "Sửa thông tin tài khoản";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    <script src="~/Scripts/jquery-1.8.2.min.js"></script>
+    <script src="~/Content/ckfinder/ckfinder.js"></script>
+}
+
+<div class="tieude-content">Sửa thông tin tài khoản</div>
+<div class="box-pro-home-eidtuser">
+    <div class="box-pro-home-eidtuser-content">
+@using (Html.BeginForm())
+{
+<table class="content-right-item-user">
+    <tr>
+        <td class="content-right-item-td">Tên đăng nhập:</td>
+        <td>@Html.Label("txtusername", @Model.username)</td>
+        </tr><tr>
+        <td class="content-right-item-td">Mật khẩu:</td>
+        <td>@Html.Password("txtpassword", @Model.password)</td>
+    </tr>
+    <tr>
+        <td class="content-right-item-td">Họ tên:</td>
+        <td>@Html.TextBox("txthoten", @Model.hoten)</td>
+        </tr><tr>
+        <td class="content-right-item-td">Giới tính nam:</td>
+        <td>
+            <select name="txtgioitinh">
+            @if(ViewBag.gioitinh == "True")
+            {
+                <option selected="selected" value="nam">Nam</option>
+                <option value="nu">Nữ</option>
+            }
+            else
+            {
+                <option value="nam">Nam</option>
+                <option selected="selected" value="nu">Nữ</option>
+            }
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td class="content-right-item-td">Ngày sinh:</td>
+        <td>@Html.TextBox("txtngaysinh", @Model.ngaysinh.Value.ToShortDateString())</td>
+        </tr><tr>
+        <td class="content-right-item-td">Địa chỉ:</td>
+        <td>@Html.TextBox("txtdiachi", @Model.diachi)</td>
+    </tr>
+    <tr>
+        <td class="content-right-item-td">SDT:</td>
+        <td>@Html.TextBox("txtsdt", @Model.sdt)</td>
+        </tr><tr>
+        <td class="content-right-item-td">Hình:</td>
+        <td><input id="hinh" name="hinh" type="text" value="@Model.hinh" /><input id="Browser" type="button" value="Chọn hình" /></td>
+    </tr>
+    <tr>
+        <td class="content-right-item-td">Email:</td>
+        <td>@Html.TextBox("txtemail", @Model.email)</td>
+        </tr><tr>
+        <td>Quyền hạng: </td>
+        <td>@Html.Label("txtquyenhang", @Model.quyenhang)</td>
+    </tr>
+    <tr>
+        <td><input type="submit" name="Insert" value="Lưu"/></td>
+        <td><input type="reset" name="reset" value="Nhập lại" /></td>
+    </tr>
+</table>
+}
+        </div>
+</div>
+<script lang="javascrip" type="text/javascript">
+    $(function() {
+        $("#Browser").click(function () {
+            var ckfiner = new CKFinder();
+            ckfiner.selectActionFunction = function (fileUrl) {
+                $("#hinh").val(fileUrl);
+            };
+            ckfiner.popup();
+        });
+    });
+</script>

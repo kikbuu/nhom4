@@ -1,0 +1,15 @@
+﻿@model WebMVCApplication.ServiceReferenceShopBanGiayPro.sanpham
+@{
+    ViewBag.Title = "Search";
+    Layout = null;
+}
+
+    @using (Html.BeginForm("SearchComplete", "Product", FormMethod.Post))
+    {
+        <table>
+            <tr>
+                <td>@Html.TextBoxFor(a => a.tensp)</td>
+                <td><input type="submit" value="Tìm" /></td>
+            </tr>
+        </table>
+    }

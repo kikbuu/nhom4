@@ -1,0 +1,1882 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServiceShopBanGiayPro" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:23729/ServiceShopBanGiayPro.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:23729/ServiceShopBanGiayPro.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:23729/ServiceShopBanGiayPro.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCFServiceApplication" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServiceShopBanGiayPro_checkCTPhieuNhap_InputMessage">
+    <wsdl:part name="parameters" element="tns:checkCTPhieuNhap" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_checkCTPhieuNhap_OutputMessage">
+    <wsdl:part name="parameters" element="tns:checkCTPhieuNhapResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_checkCTPhieuNhapSP_InputMessage">
+    <wsdl:part name="parameters" element="tns:checkCTPhieuNhapSP" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_checkCTPhieuNhapSP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:checkCTPhieuNhapSPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_insertCTPhieuNhap_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertCTPhieuNhap" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_insertCTPhieuNhap_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertCTPhieuNhapResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_deleteCTPhieuNhap_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteCTPhieuNhap" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_deleteCTPhieuNhap_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteCTPhieuNhapResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_deleteCTPhieuNhapSP_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteCTPhieuNhapSP" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_deleteCTPhieuNhapSP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteCTPhieuNhapSPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_updateCTPhieuNhap_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateCTPhieuNhap" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_updateCTPhieuNhap_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateCTPhieuNhapResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findAllTonKho_InputMessage">
+    <wsdl:part name="parameters" element="tns:findAllTonKho" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findAllTonKho_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findAllTonKhoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findListTonKhoSP_InputMessage">
+    <wsdl:part name="parameters" element="tns:findListTonKhoSP" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findListTonKhoSP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findListTonKhoSPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findTonKho_InputMessage">
+    <wsdl:part name="parameters" element="tns:findTonKho" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findTonKho_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findTonKhoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findListTonKhoTG_InputMessage">
+    <wsdl:part name="parameters" element="tns:findListTonKhoTG" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findListTonKhoTG_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findListTonKhoTGResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_insertTonKho_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertTonKho" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_insertTonKho_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertTonKhoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_deleteTonKho_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteTonKho" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_deleteTonKho_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteTonKhoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_updateTonKho_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateTonKho" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_updateTonKho_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateTonKhoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_finAllUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:finAllUser" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_finAllUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:finAllUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findTenUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:findTenUser" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findTenUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findTenUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:findUser" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_checkUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:checkUser" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_checkUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:checkUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_checkLoginUserCart_InputMessage">
+    <wsdl:part name="parameters" element="tns:checkLoginUserCart" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_checkLoginUserCart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:checkLoginUserCartResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_checkLoginAdmin_InputMessage">
+    <wsdl:part name="parameters" element="tns:checkLoginAdmin" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_checkLoginAdmin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:checkLoginAdminResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findLoginAdmin_InputMessage">
+    <wsdl:part name="parameters" element="tns:findLoginAdmin" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findLoginAdmin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findLoginAdminResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_checkLoginUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:checkLoginUser" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_checkLoginUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:checkLoginUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_deleteActiveUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteActiveUser" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_deleteActiveUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteActiveUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findLoginUserCart_InputMessage">
+    <wsdl:part name="parameters" element="tns:findLoginUserCart" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findLoginUserCart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findLoginUserCartResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findLoginUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:findLoginUser" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findLoginUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findLoginUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_insertUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertUser" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_insertUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_deleteUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteUser" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_deleteUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_updateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateUser" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_updateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findAllSanPham_InputMessage">
+    <wsdl:part name="parameters" element="tns:findAllSanPham" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findAllSanPham_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findAllSanPhamResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_SearchSanPhamNangCao_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchSanPhamNangCao" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_SearchSanPhamNangCao_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchSanPhamNangCaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_LayMaSPTT_InputMessage">
+    <wsdl:part name="parameters" element="tns:LayMaSPTT" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_LayMaSPTT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LayMaSPTTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_LayGiaSP_InputMessage">
+    <wsdl:part name="parameters" element="tns:LayGiaSP" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_LayGiaSP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LayGiaSPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_LaySoLuongSP_InputMessage">
+    <wsdl:part name="parameters" element="tns:LaySoLuongSP" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_LaySoLuongSP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LaySoLuongSPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findTenSanPham_InputMessage">
+    <wsdl:part name="parameters" element="tns:findTenSanPham" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findTenSanPham_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findTenSanPhamResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findAllSanPhamMoiNhat_InputMessage">
+    <wsdl:part name="parameters" element="tns:findAllSanPhamMoiNhat" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findAllSanPhamMoiNhat_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findAllSanPhamMoiNhatResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findSanPham_InputMessage">
+    <wsdl:part name="parameters" element="tns:findSanPham" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findSanPham_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findSanPhamResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findMaLoaiSanPham_InputMessage">
+    <wsdl:part name="parameters" element="tns:findMaLoaiSanPham" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findMaLoaiSanPham_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findMaLoaiSanPhamResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_insertSanPham_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertSanPham" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_insertSanPham_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertSanPhamResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_deleteSanPham_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteSanPham" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_deleteSanPham_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteSanPhamResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_deleteActiveSanPham_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteActiveSanPham" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_deleteActiveSanPham_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteActiveSanPhamResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_updateSanPham_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateSanPham" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_updateSanPham_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateSanPhamResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findAllCTSanPham_InputMessage">
+    <wsdl:part name="parameters" element="tns:findAllCTSanPham" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findAllCTSanPham_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findAllCTSanPhamResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findListCTSanPham_InputMessage">
+    <wsdl:part name="parameters" element="tns:findListCTSanPham" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findListCTSanPham_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findListCTSanPhamResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findCTSanPham_InputMessage">
+    <wsdl:part name="parameters" element="tns:findCTSanPham" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findCTSanPham_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findCTSanPhamResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_checkCTSanPham_InputMessage">
+    <wsdl:part name="parameters" element="tns:checkCTSanPham" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_checkCTSanPham_OutputMessage">
+    <wsdl:part name="parameters" element="tns:checkCTSanPhamResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_insertCTSanPham_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertCTSanPham" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_insertCTSanPham_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertCTSanPhamResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_deleteCTSanPham_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteCTSanPham" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_deleteCTSanPham_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteCTSanPhamResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_updateCTSanPham_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateCTSanPham" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_updateCTSanPham_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateCTSanPhamResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findAllLoai_InputMessage">
+    <wsdl:part name="parameters" element="tns:findAllLoai" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findAllLoai_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findAllLoaiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_LayMaLoaiTT_InputMessage">
+    <wsdl:part name="parameters" element="tns:LayMaLoaiTT" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_LayMaLoaiTT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LayMaLoaiTTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findLoai_InputMessage">
+    <wsdl:part name="parameters" element="tns:findLoai" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findLoai_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findLoaiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findTenLoai_InputMessage">
+    <wsdl:part name="parameters" element="tns:findTenLoai" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findTenLoai_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findTenLoaiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_insertLoai_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertLoai" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_insertLoai_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertLoaiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_deleteLoai_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteLoai" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_deleteLoai_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteLoaiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_deleteActiveLoai_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteActiveLoai" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_deleteActiveLoai_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteActiveLoaiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_updateLoai_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateLoai" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_updateLoai_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateLoaiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findAllNhaSX_InputMessage">
+    <wsdl:part name="parameters" element="tns:findAllNhaSX" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findAllNhaSX_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findAllNhaSXResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_LayMaNSXTT_InputMessage">
+    <wsdl:part name="parameters" element="tns:LayMaNSXTT" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_LayMaNSXTT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LayMaNSXTTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findNhaSX_InputMessage">
+    <wsdl:part name="parameters" element="tns:findNhaSX" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findNhaSX_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findNhaSXResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findTenNhaSX_InputMessage">
+    <wsdl:part name="parameters" element="tns:findTenNhaSX" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findTenNhaSX_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findTenNhaSXResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_insertNhaSX_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertNhaSX" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_insertNhaSX_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertNhaSXResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_deleteNhaSX_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteNhaSX" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_deleteNhaSX_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteNhaSXResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_deleteActiveNhaSX_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteActiveNhaSX" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_deleteActiveNhaSX_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteActiveNhaSXResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_updateNhaSX_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateNhaSX" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_updateNhaSX_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateNhaSXResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findAllHoaDon_InputMessage">
+    <wsdl:part name="parameters" element="tns:findAllHoaDon" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findAllHoaDon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findAllHoaDonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_checkHoDonHoanThanhChua_InputMessage">
+    <wsdl:part name="parameters" element="tns:checkHoDonHoanThanhChua" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_checkHoDonHoanThanhChua_OutputMessage">
+    <wsdl:part name="parameters" element="tns:checkHoDonHoanThanhChuaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findAllHoaDonChuaHT_InputMessage">
+    <wsdl:part name="parameters" element="tns:findAllHoaDonChuaHT" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findAllHoaDonChuaHT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findAllHoaDonChuaHTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_LayMaHDTT_InputMessage">
+    <wsdl:part name="parameters" element="tns:LayMaHDTT" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_LayMaHDTT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LayMaHDTTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findAllHoaDonDaMua_InputMessage">
+    <wsdl:part name="parameters" element="tns:findAllHoaDonDaMua" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findAllHoaDonDaMua_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findAllHoaDonDaMuaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findListHoaDonChuaXong_InputMessage">
+    <wsdl:part name="parameters" element="tns:findListHoaDonChuaXong" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findListHoaDonChuaXong_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findListHoaDonChuaXongResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findMaHoaDon_InputMessage">
+    <wsdl:part name="parameters" element="tns:findMaHoaDon" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findMaHoaDon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findMaHoaDonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findListHoaDon_InputMessage">
+    <wsdl:part name="parameters" element="tns:findListHoaDon" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findListHoaDon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findListHoaDonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findHoaDon_InputMessage">
+    <wsdl:part name="parameters" element="tns:findHoaDon" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findHoaDon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findHoaDonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_deleteActiveHoaDon_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteActiveHoaDon" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_deleteActiveHoaDon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteActiveHoaDonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_insertHoaDon_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertHoaDon" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_insertHoaDon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertHoaDonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_deleteHoaDon_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteHoaDon" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_deleteHoaDon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteHoaDonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_updateTrangThaiHoaDon_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateTrangThaiHoaDon" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_updateTrangThaiHoaDon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateTrangThaiHoaDonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_updateHoaDon_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateHoaDon" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_updateHoaDon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateHoaDonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findAllCTHoaDon_InputMessage">
+    <wsdl:part name="parameters" element="tns:findAllCTHoaDon" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findAllCTHoaDon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findAllCTHoaDonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findListCTHoaDon_InputMessage">
+    <wsdl:part name="parameters" element="tns:findListCTHoaDon" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findListCTHoaDon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findListCTHoaDonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findCTHoaDonID_InputMessage">
+    <wsdl:part name="parameters" element="tns:findCTHoaDonID" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findCTHoaDonID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findCTHoaDonIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findCTHoaDon_InputMessage">
+    <wsdl:part name="parameters" element="tns:findCTHoaDon" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findCTHoaDon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findCTHoaDonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_checkCTHoaDon_InputMessage">
+    <wsdl:part name="parameters" element="tns:checkCTHoaDon" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_checkCTHoaDon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:checkCTHoaDonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_insertCTHoaDon_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertCTHoaDon" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_insertCTHoaDon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertCTHoaDonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_deleteCTHoaDonSP_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteCTHoaDonSP" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_deleteCTHoaDonSP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteCTHoaDonSPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_deleteCTHoaDon_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteCTHoaDon" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_deleteCTHoaDon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteCTHoaDonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_updateCTHoaDon_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateCTHoaDon" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_updateCTHoaDon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateCTHoaDonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findAllPhieuNhap_InputMessage">
+    <wsdl:part name="parameters" element="tns:findAllPhieuNhap" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findAllPhieuNhap_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findAllPhieuNhapResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_LayMaPNTT_InputMessage">
+    <wsdl:part name="parameters" element="tns:LayMaPNTT" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_LayMaPNTT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LayMaPNTTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findPhieuNhap_InputMessage">
+    <wsdl:part name="parameters" element="tns:findPhieuNhap" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findPhieuNhap_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findPhieuNhapResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_checkPhieuNhap_InputMessage">
+    <wsdl:part name="parameters" element="tns:checkPhieuNhap" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_checkPhieuNhap_OutputMessage">
+    <wsdl:part name="parameters" element="tns:checkPhieuNhapResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_insertPhieuNhap_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertPhieuNhap" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_insertPhieuNhap_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertPhieuNhapResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_deletePhieuNhap_InputMessage">
+    <wsdl:part name="parameters" element="tns:deletePhieuNhap" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_deletePhieuNhap_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deletePhieuNhapResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_deleteActivePhieuNhap_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteActivePhieuNhap" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_deleteActivePhieuNhap_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteActivePhieuNhapResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_updatePhieuNhap_InputMessage">
+    <wsdl:part name="parameters" element="tns:updatePhieuNhap" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_updatePhieuNhap_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updatePhieuNhapResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findAllCTPhieuNhap_InputMessage">
+    <wsdl:part name="parameters" element="tns:findAllCTPhieuNhap" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findAllCTPhieuNhap_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findAllCTPhieuNhapResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findListCTPhieuNhap_InputMessage">
+    <wsdl:part name="parameters" element="tns:findListCTPhieuNhap" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findListCTPhieuNhap_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findListCTPhieuNhapResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findCTPhieuNhap_InputMessage">
+    <wsdl:part name="parameters" element="tns:findCTPhieuNhap" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_findCTPhieuNhap_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findCTPhieuNhapResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_LaySLSPCTPhieuNhap_InputMessage">
+    <wsdl:part name="parameters" element="tns:LaySLSPCTPhieuNhap" />
+  </wsdl:message>
+  <wsdl:message name="IServiceShopBanGiayPro_LaySLSPCTPhieuNhap_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LaySLSPCTPhieuNhapResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServiceShopBanGiayPro">
+    <wsdl:operation name="checkCTPhieuNhap">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/checkCTPhieuNhap" message="tns:IServiceShopBanGiayPro_checkCTPhieuNhap_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/checkCTPhieuNhapResponse" message="tns:IServiceShopBanGiayPro_checkCTPhieuNhap_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="checkCTPhieuNhapSP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/checkCTPhieuNhapSP" message="tns:IServiceShopBanGiayPro_checkCTPhieuNhapSP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/checkCTPhieuNhapSPResponse" message="tns:IServiceShopBanGiayPro_checkCTPhieuNhapSP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertCTPhieuNhap">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/insertCTPhieuNhap" message="tns:IServiceShopBanGiayPro_insertCTPhieuNhap_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/insertCTPhieuNhapResponse" message="tns:IServiceShopBanGiayPro_insertCTPhieuNhap_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteCTPhieuNhap">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/deleteCTPhieuNhap" message="tns:IServiceShopBanGiayPro_deleteCTPhieuNhap_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/deleteCTPhieuNhapResponse" message="tns:IServiceShopBanGiayPro_deleteCTPhieuNhap_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteCTPhieuNhapSP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/deleteCTPhieuNhapSP" message="tns:IServiceShopBanGiayPro_deleteCTPhieuNhapSP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/deleteCTPhieuNhapSPResponse" message="tns:IServiceShopBanGiayPro_deleteCTPhieuNhapSP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateCTPhieuNhap">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/updateCTPhieuNhap" message="tns:IServiceShopBanGiayPro_updateCTPhieuNhap_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/updateCTPhieuNhapResponse" message="tns:IServiceShopBanGiayPro_updateCTPhieuNhap_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findAllTonKho">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findAllTonKho" message="tns:IServiceShopBanGiayPro_findAllTonKho_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findAllTonKhoResponse" message="tns:IServiceShopBanGiayPro_findAllTonKho_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findListTonKhoSP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findListTonKhoSP" message="tns:IServiceShopBanGiayPro_findListTonKhoSP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findListTonKhoSPResponse" message="tns:IServiceShopBanGiayPro_findListTonKhoSP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findTonKho">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findTonKho" message="tns:IServiceShopBanGiayPro_findTonKho_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findTonKhoResponse" message="tns:IServiceShopBanGiayPro_findTonKho_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findListTonKhoTG">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findListTonKhoTG" message="tns:IServiceShopBanGiayPro_findListTonKhoTG_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findListTonKhoTGResponse" message="tns:IServiceShopBanGiayPro_findListTonKhoTG_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertTonKho">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/insertTonKho" message="tns:IServiceShopBanGiayPro_insertTonKho_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/insertTonKhoResponse" message="tns:IServiceShopBanGiayPro_insertTonKho_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteTonKho">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/deleteTonKho" message="tns:IServiceShopBanGiayPro_deleteTonKho_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/deleteTonKhoResponse" message="tns:IServiceShopBanGiayPro_deleteTonKho_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateTonKho">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/updateTonKho" message="tns:IServiceShopBanGiayPro_updateTonKho_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/updateTonKhoResponse" message="tns:IServiceShopBanGiayPro_updateTonKho_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="finAllUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/finAllUser" message="tns:IServiceShopBanGiayPro_finAllUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/finAllUserResponse" message="tns:IServiceShopBanGiayPro_finAllUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findTenUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findTenUser" message="tns:IServiceShopBanGiayPro_findTenUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findTenUserResponse" message="tns:IServiceShopBanGiayPro_findTenUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findUser" message="tns:IServiceShopBanGiayPro_findUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findUserResponse" message="tns:IServiceShopBanGiayPro_findUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="checkUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/checkUser" message="tns:IServiceShopBanGiayPro_checkUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/checkUserResponse" message="tns:IServiceShopBanGiayPro_checkUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="checkLoginUserCart">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/checkLoginUserCart" message="tns:IServiceShopBanGiayPro_checkLoginUserCart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/checkLoginUserCartResponse" message="tns:IServiceShopBanGiayPro_checkLoginUserCart_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="checkLoginAdmin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/checkLoginAdmin" message="tns:IServiceShopBanGiayPro_checkLoginAdmin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/checkLoginAdminResponse" message="tns:IServiceShopBanGiayPro_checkLoginAdmin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findLoginAdmin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findLoginAdmin" message="tns:IServiceShopBanGiayPro_findLoginAdmin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findLoginAdminResponse" message="tns:IServiceShopBanGiayPro_findLoginAdmin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="checkLoginUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/checkLoginUser" message="tns:IServiceShopBanGiayPro_checkLoginUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/checkLoginUserResponse" message="tns:IServiceShopBanGiayPro_checkLoginUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteActiveUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/deleteActiveUser" message="tns:IServiceShopBanGiayPro_deleteActiveUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/deleteActiveUserResponse" message="tns:IServiceShopBanGiayPro_deleteActiveUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findLoginUserCart">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findLoginUserCart" message="tns:IServiceShopBanGiayPro_findLoginUserCart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findLoginUserCartResponse" message="tns:IServiceShopBanGiayPro_findLoginUserCart_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findLoginUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findLoginUser" message="tns:IServiceShopBanGiayPro_findLoginUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findLoginUserResponse" message="tns:IServiceShopBanGiayPro_findLoginUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/insertUser" message="tns:IServiceShopBanGiayPro_insertUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/insertUserResponse" message="tns:IServiceShopBanGiayPro_insertUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/deleteUser" message="tns:IServiceShopBanGiayPro_deleteUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/deleteUserResponse" message="tns:IServiceShopBanGiayPro_deleteUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/updateUser" message="tns:IServiceShopBanGiayPro_updateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/updateUserResponse" message="tns:IServiceShopBanGiayPro_updateUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findAllSanPham">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findAllSanPham" message="tns:IServiceShopBanGiayPro_findAllSanPham_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findAllSanPhamResponse" message="tns:IServiceShopBanGiayPro_findAllSanPham_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchSanPhamNangCao">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/SearchSanPhamNangCao" message="tns:IServiceShopBanGiayPro_SearchSanPhamNangCao_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/SearchSanPhamNangCaoResponse" message="tns:IServiceShopBanGiayPro_SearchSanPhamNangCao_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LayMaSPTT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/LayMaSPTT" message="tns:IServiceShopBanGiayPro_LayMaSPTT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/LayMaSPTTResponse" message="tns:IServiceShopBanGiayPro_LayMaSPTT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LayGiaSP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/LayGiaSP" message="tns:IServiceShopBanGiayPro_LayGiaSP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/LayGiaSPResponse" message="tns:IServiceShopBanGiayPro_LayGiaSP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LaySoLuongSP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/LaySoLuongSP" message="tns:IServiceShopBanGiayPro_LaySoLuongSP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/LaySoLuongSPResponse" message="tns:IServiceShopBanGiayPro_LaySoLuongSP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findTenSanPham">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findTenSanPham" message="tns:IServiceShopBanGiayPro_findTenSanPham_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findTenSanPhamResponse" message="tns:IServiceShopBanGiayPro_findTenSanPham_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findAllSanPhamMoiNhat">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findAllSanPhamMoiNhat" message="tns:IServiceShopBanGiayPro_findAllSanPhamMoiNhat_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findAllSanPhamMoiNhatResponse" message="tns:IServiceShopBanGiayPro_findAllSanPhamMoiNhat_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findSanPham">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findSanPham" message="tns:IServiceShopBanGiayPro_findSanPham_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findSanPhamResponse" message="tns:IServiceShopBanGiayPro_findSanPham_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findMaLoaiSanPham">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findMaLoaiSanPham" message="tns:IServiceShopBanGiayPro_findMaLoaiSanPham_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findMaLoaiSanPhamResponse" message="tns:IServiceShopBanGiayPro_findMaLoaiSanPham_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertSanPham">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/insertSanPham" message="tns:IServiceShopBanGiayPro_insertSanPham_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/insertSanPhamResponse" message="tns:IServiceShopBanGiayPro_insertSanPham_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteSanPham">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/deleteSanPham" message="tns:IServiceShopBanGiayPro_deleteSanPham_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/deleteSanPhamResponse" message="tns:IServiceShopBanGiayPro_deleteSanPham_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteActiveSanPham">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/deleteActiveSanPham" message="tns:IServiceShopBanGiayPro_deleteActiveSanPham_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/deleteActiveSanPhamResponse" message="tns:IServiceShopBanGiayPro_deleteActiveSanPham_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateSanPham">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/updateSanPham" message="tns:IServiceShopBanGiayPro_updateSanPham_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/updateSanPhamResponse" message="tns:IServiceShopBanGiayPro_updateSanPham_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findAllCTSanPham">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findAllCTSanPham" message="tns:IServiceShopBanGiayPro_findAllCTSanPham_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findAllCTSanPhamResponse" message="tns:IServiceShopBanGiayPro_findAllCTSanPham_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findListCTSanPham">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findListCTSanPham" message="tns:IServiceShopBanGiayPro_findListCTSanPham_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findListCTSanPhamResponse" message="tns:IServiceShopBanGiayPro_findListCTSanPham_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findCTSanPham">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findCTSanPham" message="tns:IServiceShopBanGiayPro_findCTSanPham_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findCTSanPhamResponse" message="tns:IServiceShopBanGiayPro_findCTSanPham_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="checkCTSanPham">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/checkCTSanPham" message="tns:IServiceShopBanGiayPro_checkCTSanPham_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/checkCTSanPhamResponse" message="tns:IServiceShopBanGiayPro_checkCTSanPham_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertCTSanPham">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/insertCTSanPham" message="tns:IServiceShopBanGiayPro_insertCTSanPham_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/insertCTSanPhamResponse" message="tns:IServiceShopBanGiayPro_insertCTSanPham_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteCTSanPham">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/deleteCTSanPham" message="tns:IServiceShopBanGiayPro_deleteCTSanPham_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/deleteCTSanPhamResponse" message="tns:IServiceShopBanGiayPro_deleteCTSanPham_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateCTSanPham">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/updateCTSanPham" message="tns:IServiceShopBanGiayPro_updateCTSanPham_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/updateCTSanPhamResponse" message="tns:IServiceShopBanGiayPro_updateCTSanPham_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findAllLoai">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findAllLoai" message="tns:IServiceShopBanGiayPro_findAllLoai_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findAllLoaiResponse" message="tns:IServiceShopBanGiayPro_findAllLoai_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LayMaLoaiTT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/LayMaLoaiTT" message="tns:IServiceShopBanGiayPro_LayMaLoaiTT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/LayMaLoaiTTResponse" message="tns:IServiceShopBanGiayPro_LayMaLoaiTT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findLoai">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findLoai" message="tns:IServiceShopBanGiayPro_findLoai_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findLoaiResponse" message="tns:IServiceShopBanGiayPro_findLoai_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findTenLoai">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findTenLoai" message="tns:IServiceShopBanGiayPro_findTenLoai_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findTenLoaiResponse" message="tns:IServiceShopBanGiayPro_findTenLoai_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertLoai">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/insertLoai" message="tns:IServiceShopBanGiayPro_insertLoai_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/insertLoaiResponse" message="tns:IServiceShopBanGiayPro_insertLoai_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteLoai">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/deleteLoai" message="tns:IServiceShopBanGiayPro_deleteLoai_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/deleteLoaiResponse" message="tns:IServiceShopBanGiayPro_deleteLoai_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteActiveLoai">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/deleteActiveLoai" message="tns:IServiceShopBanGiayPro_deleteActiveLoai_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/deleteActiveLoaiResponse" message="tns:IServiceShopBanGiayPro_deleteActiveLoai_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateLoai">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/updateLoai" message="tns:IServiceShopBanGiayPro_updateLoai_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/updateLoaiResponse" message="tns:IServiceShopBanGiayPro_updateLoai_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findAllNhaSX">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findAllNhaSX" message="tns:IServiceShopBanGiayPro_findAllNhaSX_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findAllNhaSXResponse" message="tns:IServiceShopBanGiayPro_findAllNhaSX_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LayMaNSXTT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/LayMaNSXTT" message="tns:IServiceShopBanGiayPro_LayMaNSXTT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/LayMaNSXTTResponse" message="tns:IServiceShopBanGiayPro_LayMaNSXTT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findNhaSX">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findNhaSX" message="tns:IServiceShopBanGiayPro_findNhaSX_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findNhaSXResponse" message="tns:IServiceShopBanGiayPro_findNhaSX_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findTenNhaSX">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findTenNhaSX" message="tns:IServiceShopBanGiayPro_findTenNhaSX_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findTenNhaSXResponse" message="tns:IServiceShopBanGiayPro_findTenNhaSX_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertNhaSX">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/insertNhaSX" message="tns:IServiceShopBanGiayPro_insertNhaSX_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/insertNhaSXResponse" message="tns:IServiceShopBanGiayPro_insertNhaSX_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteNhaSX">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/deleteNhaSX" message="tns:IServiceShopBanGiayPro_deleteNhaSX_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/deleteNhaSXResponse" message="tns:IServiceShopBanGiayPro_deleteNhaSX_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteActiveNhaSX">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/deleteActiveNhaSX" message="tns:IServiceShopBanGiayPro_deleteActiveNhaSX_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/deleteActiveNhaSXResponse" message="tns:IServiceShopBanGiayPro_deleteActiveNhaSX_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateNhaSX">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/updateNhaSX" message="tns:IServiceShopBanGiayPro_updateNhaSX_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/updateNhaSXResponse" message="tns:IServiceShopBanGiayPro_updateNhaSX_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findAllHoaDon">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findAllHoaDon" message="tns:IServiceShopBanGiayPro_findAllHoaDon_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findAllHoaDonResponse" message="tns:IServiceShopBanGiayPro_findAllHoaDon_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="checkHoDonHoanThanhChua">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/checkHoDonHoanThanhChua" message="tns:IServiceShopBanGiayPro_checkHoDonHoanThanhChua_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/checkHoDonHoanThanhChuaResponse" message="tns:IServiceShopBanGiayPro_checkHoDonHoanThanhChua_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findAllHoaDonChuaHT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findAllHoaDonChuaHT" message="tns:IServiceShopBanGiayPro_findAllHoaDonChuaHT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findAllHoaDonChuaHTResponse" message="tns:IServiceShopBanGiayPro_findAllHoaDonChuaHT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LayMaHDTT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/LayMaHDTT" message="tns:IServiceShopBanGiayPro_LayMaHDTT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/LayMaHDTTResponse" message="tns:IServiceShopBanGiayPro_LayMaHDTT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findAllHoaDonDaMua">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findAllHoaDonDaMua" message="tns:IServiceShopBanGiayPro_findAllHoaDonDaMua_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findAllHoaDonDaMuaResponse" message="tns:IServiceShopBanGiayPro_findAllHoaDonDaMua_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findListHoaDonChuaXong">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findListHoaDonChuaXong" message="tns:IServiceShopBanGiayPro_findListHoaDonChuaXong_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findListHoaDonChuaXongResponse" message="tns:IServiceShopBanGiayPro_findListHoaDonChuaXong_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findMaHoaDon">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findMaHoaDon" message="tns:IServiceShopBanGiayPro_findMaHoaDon_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findMaHoaDonResponse" message="tns:IServiceShopBanGiayPro_findMaHoaDon_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findListHoaDon">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findListHoaDon" message="tns:IServiceShopBanGiayPro_findListHoaDon_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findListHoaDonResponse" message="tns:IServiceShopBanGiayPro_findListHoaDon_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findHoaDon">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findHoaDon" message="tns:IServiceShopBanGiayPro_findHoaDon_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findHoaDonResponse" message="tns:IServiceShopBanGiayPro_findHoaDon_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteActiveHoaDon">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/deleteActiveHoaDon" message="tns:IServiceShopBanGiayPro_deleteActiveHoaDon_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/deleteActiveHoaDonResponse" message="tns:IServiceShopBanGiayPro_deleteActiveHoaDon_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertHoaDon">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/insertHoaDon" message="tns:IServiceShopBanGiayPro_insertHoaDon_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/insertHoaDonResponse" message="tns:IServiceShopBanGiayPro_insertHoaDon_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteHoaDon">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/deleteHoaDon" message="tns:IServiceShopBanGiayPro_deleteHoaDon_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/deleteHoaDonResponse" message="tns:IServiceShopBanGiayPro_deleteHoaDon_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateTrangThaiHoaDon">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/updateTrangThaiHoaDon" message="tns:IServiceShopBanGiayPro_updateTrangThaiHoaDon_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/updateTrangThaiHoaDonResponse" message="tns:IServiceShopBanGiayPro_updateTrangThaiHoaDon_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateHoaDon">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/updateHoaDon" message="tns:IServiceShopBanGiayPro_updateHoaDon_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/updateHoaDonResponse" message="tns:IServiceShopBanGiayPro_updateHoaDon_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findAllCTHoaDon">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findAllCTHoaDon" message="tns:IServiceShopBanGiayPro_findAllCTHoaDon_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findAllCTHoaDonResponse" message="tns:IServiceShopBanGiayPro_findAllCTHoaDon_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findListCTHoaDon">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findListCTHoaDon" message="tns:IServiceShopBanGiayPro_findListCTHoaDon_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findListCTHoaDonResponse" message="tns:IServiceShopBanGiayPro_findListCTHoaDon_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findCTHoaDonID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findCTHoaDonID" message="tns:IServiceShopBanGiayPro_findCTHoaDonID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findCTHoaDonIDResponse" message="tns:IServiceShopBanGiayPro_findCTHoaDonID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findCTHoaDon">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findCTHoaDon" message="tns:IServiceShopBanGiayPro_findCTHoaDon_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findCTHoaDonResponse" message="tns:IServiceShopBanGiayPro_findCTHoaDon_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="checkCTHoaDon">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/checkCTHoaDon" message="tns:IServiceShopBanGiayPro_checkCTHoaDon_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/checkCTHoaDonResponse" message="tns:IServiceShopBanGiayPro_checkCTHoaDon_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertCTHoaDon">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/insertCTHoaDon" message="tns:IServiceShopBanGiayPro_insertCTHoaDon_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/insertCTHoaDonResponse" message="tns:IServiceShopBanGiayPro_insertCTHoaDon_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteCTHoaDonSP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/deleteCTHoaDonSP" message="tns:IServiceShopBanGiayPro_deleteCTHoaDonSP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/deleteCTHoaDonSPResponse" message="tns:IServiceShopBanGiayPro_deleteCTHoaDonSP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteCTHoaDon">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/deleteCTHoaDon" message="tns:IServiceShopBanGiayPro_deleteCTHoaDon_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/deleteCTHoaDonResponse" message="tns:IServiceShopBanGiayPro_deleteCTHoaDon_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateCTHoaDon">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/updateCTHoaDon" message="tns:IServiceShopBanGiayPro_updateCTHoaDon_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/updateCTHoaDonResponse" message="tns:IServiceShopBanGiayPro_updateCTHoaDon_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findAllPhieuNhap">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findAllPhieuNhap" message="tns:IServiceShopBanGiayPro_findAllPhieuNhap_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findAllPhieuNhapResponse" message="tns:IServiceShopBanGiayPro_findAllPhieuNhap_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LayMaPNTT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/LayMaPNTT" message="tns:IServiceShopBanGiayPro_LayMaPNTT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/LayMaPNTTResponse" message="tns:IServiceShopBanGiayPro_LayMaPNTT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findPhieuNhap">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findPhieuNhap" message="tns:IServiceShopBanGiayPro_findPhieuNhap_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findPhieuNhapResponse" message="tns:IServiceShopBanGiayPro_findPhieuNhap_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="checkPhieuNhap">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/checkPhieuNhap" message="tns:IServiceShopBanGiayPro_checkPhieuNhap_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/checkPhieuNhapResponse" message="tns:IServiceShopBanGiayPro_checkPhieuNhap_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertPhieuNhap">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/insertPhieuNhap" message="tns:IServiceShopBanGiayPro_insertPhieuNhap_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/insertPhieuNhapResponse" message="tns:IServiceShopBanGiayPro_insertPhieuNhap_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deletePhieuNhap">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/deletePhieuNhap" message="tns:IServiceShopBanGiayPro_deletePhieuNhap_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/deletePhieuNhapResponse" message="tns:IServiceShopBanGiayPro_deletePhieuNhap_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteActivePhieuNhap">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/deleteActivePhieuNhap" message="tns:IServiceShopBanGiayPro_deleteActivePhieuNhap_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/deleteActivePhieuNhapResponse" message="tns:IServiceShopBanGiayPro_deleteActivePhieuNhap_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updatePhieuNhap">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/updatePhieuNhap" message="tns:IServiceShopBanGiayPro_updatePhieuNhap_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/updatePhieuNhapResponse" message="tns:IServiceShopBanGiayPro_updatePhieuNhap_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findAllCTPhieuNhap">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findAllCTPhieuNhap" message="tns:IServiceShopBanGiayPro_findAllCTPhieuNhap_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findAllCTPhieuNhapResponse" message="tns:IServiceShopBanGiayPro_findAllCTPhieuNhap_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findListCTPhieuNhap">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findListCTPhieuNhap" message="tns:IServiceShopBanGiayPro_findListCTPhieuNhap_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findListCTPhieuNhapResponse" message="tns:IServiceShopBanGiayPro_findListCTPhieuNhap_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findCTPhieuNhap">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findCTPhieuNhap" message="tns:IServiceShopBanGiayPro_findCTPhieuNhap_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/findCTPhieuNhapResponse" message="tns:IServiceShopBanGiayPro_findCTPhieuNhap_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LaySLSPCTPhieuNhap">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/LaySLSPCTPhieuNhap" message="tns:IServiceShopBanGiayPro_LaySLSPCTPhieuNhap_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceShopBanGiayPro/LaySLSPCTPhieuNhapResponse" message="tns:IServiceShopBanGiayPro_LaySLSPCTPhieuNhap_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServiceShopBanGiayPro" type="tns:IServiceShopBanGiayPro">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="checkCTPhieuNhap">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/checkCTPhieuNhap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkCTPhieuNhapSP">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/checkCTPhieuNhapSP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertCTPhieuNhap">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/insertCTPhieuNhap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteCTPhieuNhap">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/deleteCTPhieuNhap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteCTPhieuNhapSP">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/deleteCTPhieuNhapSP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateCTPhieuNhap">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/updateCTPhieuNhap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findAllTonKho">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/findAllTonKho" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findListTonKhoSP">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/findListTonKhoSP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findTonKho">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/findTonKho" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findListTonKhoTG">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/findListTonKhoTG" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertTonKho">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/insertTonKho" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteTonKho">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/deleteTonKho" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateTonKho">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/updateTonKho" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="finAllUser">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/finAllUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findTenUser">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/findTenUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findUser">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/findUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkUser">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/checkUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkLoginUserCart">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/checkLoginUserCart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkLoginAdmin">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/checkLoginAdmin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findLoginAdmin">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/findLoginAdmin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkLoginUser">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/checkLoginUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteActiveUser">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/deleteActiveUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findLoginUserCart">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/findLoginUserCart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findLoginUser">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/findLoginUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertUser">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/insertUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteUser">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/deleteUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateUser">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/updateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findAllSanPham">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/findAllSanPham" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchSanPhamNangCao">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/SearchSanPhamNangCao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LayMaSPTT">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/LayMaSPTT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LayGiaSP">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/LayGiaSP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LaySoLuongSP">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/LaySoLuongSP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findTenSanPham">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/findTenSanPham" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findAllSanPhamMoiNhat">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/findAllSanPhamMoiNhat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findSanPham">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/findSanPham" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findMaLoaiSanPham">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/findMaLoaiSanPham" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertSanPham">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/insertSanPham" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteSanPham">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/deleteSanPham" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteActiveSanPham">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/deleteActiveSanPham" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateSanPham">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/updateSanPham" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findAllCTSanPham">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/findAllCTSanPham" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findListCTSanPham">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/findListCTSanPham" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findCTSanPham">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/findCTSanPham" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkCTSanPham">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/checkCTSanPham" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertCTSanPham">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/insertCTSanPham" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteCTSanPham">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/deleteCTSanPham" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateCTSanPham">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/updateCTSanPham" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findAllLoai">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/findAllLoai" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LayMaLoaiTT">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/LayMaLoaiTT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findLoai">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/findLoai" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findTenLoai">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/findTenLoai" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertLoai">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/insertLoai" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteLoai">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/deleteLoai" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteActiveLoai">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/deleteActiveLoai" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateLoai">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/updateLoai" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findAllNhaSX">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/findAllNhaSX" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LayMaNSXTT">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/LayMaNSXTT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findNhaSX">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/findNhaSX" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findTenNhaSX">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/findTenNhaSX" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertNhaSX">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/insertNhaSX" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteNhaSX">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/deleteNhaSX" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteActiveNhaSX">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/deleteActiveNhaSX" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateNhaSX">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/updateNhaSX" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findAllHoaDon">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/findAllHoaDon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkHoDonHoanThanhChua">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/checkHoDonHoanThanhChua" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findAllHoaDonChuaHT">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/findAllHoaDonChuaHT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LayMaHDTT">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/LayMaHDTT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findAllHoaDonDaMua">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/findAllHoaDonDaMua" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findListHoaDonChuaXong">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/findListHoaDonChuaXong" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findMaHoaDon">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/findMaHoaDon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findListHoaDon">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/findListHoaDon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findHoaDon">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/findHoaDon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteActiveHoaDon">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/deleteActiveHoaDon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertHoaDon">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/insertHoaDon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteHoaDon">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/deleteHoaDon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateTrangThaiHoaDon">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/updateTrangThaiHoaDon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateHoaDon">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/updateHoaDon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findAllCTHoaDon">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/findAllCTHoaDon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findListCTHoaDon">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/findListCTHoaDon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findCTHoaDonID">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/findCTHoaDonID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findCTHoaDon">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/findCTHoaDon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkCTHoaDon">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/checkCTHoaDon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertCTHoaDon">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/insertCTHoaDon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteCTHoaDonSP">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/deleteCTHoaDonSP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteCTHoaDon">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/deleteCTHoaDon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateCTHoaDon">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/updateCTHoaDon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findAllPhieuNhap">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/findAllPhieuNhap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LayMaPNTT">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/LayMaPNTT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findPhieuNhap">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/findPhieuNhap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkPhieuNhap">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/checkPhieuNhap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertPhieuNhap">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/insertPhieuNhap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deletePhieuNhap">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/deletePhieuNhap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteActivePhieuNhap">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/deleteActivePhieuNhap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updatePhieuNhap">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/updatePhieuNhap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findAllCTPhieuNhap">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/findAllCTPhieuNhap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findListCTPhieuNhap">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/findListCTPhieuNhap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findCTPhieuNhap">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/findCTPhieuNhap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LaySLSPCTPhieuNhap">
+      <soap:operation soapAction="http://tempuri.org/IServiceShopBanGiayPro/LaySLSPCTPhieuNhap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceShopBanGiayPro">
+    <wsdl:port name="BasicHttpBinding_IServiceShopBanGiayPro" binding="tns:BasicHttpBinding_IServiceShopBanGiayPro">
+      <soap:address location="http://localhost:23729/ServiceShopBanGiayPro.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

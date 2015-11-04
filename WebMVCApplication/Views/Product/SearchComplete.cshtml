@@ -1,0 +1,33 @@
+﻿@model IEnumerable<WebMVCApplication.ServiceReferenceShopBanGiayPro.sanpham>
+
+@{
+    ViewBag.Title = "Kết quả tìm kiếm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="tieude-content">Kết quả tìm kiếm</div>
+<div class="box-pro-home-searchcomplete">
+@if(Model.Count() > 0)
+{
+    foreach (var item in Model)
+    {
+        <div class="item-pro-home">
+            <div class="box-img-pro-home">
+            <a href="/Product/Detail/@Html.Raw(item.masp)">
+                <img src="@Html.Raw(item.hinh)"/>
+            </a>
+        </div>
+        <a href="Product/Detail/" target="_blank\" >@Html.ActionLink(item.tensp, "Detail", "Product", new { id = item.masp.Trim() }, null)</a>
+        <p>Giá: @string.Format("{0:0,0 VNĐ}", item.gia).Replace(",", ".")</p>
+        <button name="chitiet" value="Chi tiết">@Html.ActionLink("Chi tiết", "Detail", "Product", new { id = item.masp.Trim() }, null)</button>
+        <button name="chonmua" value="Chọn mua">@Html.ActionLink("Chọn mua", "AddToCart", "Shopping", new { id = item.masp.Trim(), gia = item.gia }, null)</button>
+        </div>
+    }
+}
+else
+{
+    <div>
+        <p>Không có kết quả tìm kiếm với từ khóa: <b>@Html.Raw(ViewBag.KhongTimThay)</b></p>
+    </div>
+}
+</div>

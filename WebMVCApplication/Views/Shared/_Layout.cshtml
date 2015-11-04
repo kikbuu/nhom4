@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/Style.css" rel="stylesheet" />
+    <link href="~/Content/ddlevelsmenu-base.css" rel="stylesheet" />
+    <link href="~/Content/ddlevelsmenu-topbar.css" rel="stylesheet" />
+    <script src="~/Scripts/ddlevelsmenu.js"></script>
+</head>
+<body>
+    <div class="main">
+        <div class="head"></div>
+        <div class="menu">
+            @{Html.RenderAction("Menu", "Product");}
+        </div>
+        <div class="content">
+            <div class="content-left">
+                @RenderBody()
+            </div>
+            <div class="content-right">
+                <div>
+                    @{Html.RenderAction("Cart", "Shopping");}
+                </div>
+                @{if (Session["LogedUserFullname"] != null)
+                    {Html.RenderAction("AfterLoginUser", "Account");}
+                  else
+                    {Html.RenderAction("LoginUser", "Account"); }
+                }
+                <div class="content-right-ads">
+                    @{Html.RenderPartial("_LayoutAds");}
+                </div>
+            </div>
+        </div>
+        <div class="content-bottom">
+            <a>Website: Đẳng cấp giày hiệu<br /></a>
+            <a>Địa chỉ: 273 Nguyễn Trãi, P12, Q5<br /></a>
+            <a>Điện thoại: 0906048993 <br /></a>
+            <a>Thiết kế bởi: Nhóm 4:Khải,Sĩ,Phúc</a><br />
+            <a href="/Product/TimKiemNangCao">Tìm kiếm nâng cao</a>
+        </div>
+    </div>
+</body>
+</html>

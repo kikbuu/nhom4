@@ -1,0 +1,24 @@
+﻿@model WebMVCApplication.ServiceReferenceShopBanGiayPro.ct_sanpham
+
+@{
+    ViewBag.Title = "Chi tiết sản phẩm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="tieude-content">Chi tiết sản phẩm</div>
+<div class="box-detail-home">
+    <div class="box-img-detail-home">
+        <img src="@Html.Raw(Model.sanpham.hinh)"/>
+    </div>
+    <div class="box-detail-content">
+        <p class="box-detail-content-tieude">THÔNG TIN CHI TIẾT SẢN PHẨM: <a style="color: red;">@Html.Raw(Model.sanpham.tensp)</a></p>
+        <p class="box-detail-content-thuoctinh">Giá: @Html.Raw(Model.sanpham.gia) VNĐ</p>
+        <p class="box-detail-content-thuoctinh">Màu sắc: @Html.Raw(Model.mausac)</p>
+        <p class="box-detail-content-thuoctinh">Kiểu dáng: @Html.Raw(Model.kieudang)</p>
+        <p class="box-detail-content-thuoctinh">Chất liệu: @Html.Raw(Model.chatlieu)</p>
+        <p class="box-detail-content-thuoctinh">Xuất xứ: @Html.Raw(Model.xuatxu)</p>
+        <button name="chonmua" value="Chọn mua">@Html.ActionLink("Chọn mua", "AddToCart", "Shopping", new { id = Model.masp.Trim(), gia = Model.sanpham.gia }, null)</button>
+    </div>
+    <div class="box-detail-content-mota">
+        <p>@Html.Raw(Model.mota)</p>
+    </div>
+</div>

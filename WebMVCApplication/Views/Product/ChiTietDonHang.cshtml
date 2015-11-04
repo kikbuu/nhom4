@@ -1,0 +1,44 @@
+﻿@model IEnumerable<WebMVCApplication.ServiceReferenceShopBanGiayPro.ct_hoadon>
+
+@{
+    ViewBag.Title = "Chi tiết hóa đơn";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="tieude-content">Chi tiết đơn hàng</div>
+@using (Html.BeginForm())
+{
+<table border="1" style="width:100%">
+    <tr>
+        <td>ID</td>
+        <td>Mã hóa đơn</td>
+        <td>Tên SP</td>
+        <td>Số lượng</td>
+        <td>Thành tiền</td>
+        <td colspan="2">Tác vụ</td>
+    </tr>
+    @{foreach (var item in Model)
+      {
+        <tr>
+            <td>@Html.Raw(item.id)</td>
+            <td>@Html.Raw(item.mahd)</td>
+            <td>@Html.Raw(item.sanpham.tensp)</td>
+            <td>@Html.Raw(item.soluong)</td>
+            <td>@Html.Raw(item.thanhtien)</td>
+            @{if(@Session["kthoanthanh"] == "true")
+            {
+                <td></td>
+                <td></td>
+            }
+            else
+            {
+                <td>@Html.ActionLink("Sửa", "SuaChiTietDonHang", "Product", new { id = item.id }, null)</td>
+                <td>@Html.ActionLink("Xóa", "XoaChiTietDonHang", "Product", new { id = item.id }, null)</td>
+            }
+            }
+        </tr>
+        }
+    }
+</table>
+}
+<a></a>
