@@ -9,12 +9,12 @@
 <div class="tieude-content">Sửa thông tin tài khoản</div>
 <div class="box-pro-home-eidtuser">
     <div class="box-pro-home-eidtuser-content">
-@using (Html.BeginForm())
+@using (Html.BeginForm("EditInfoUser", "Account"))
 {
 <table class="content-right-item-user">
     <tr>
         <td class="content-right-item-td">Tên đăng nhập:</td>
-        <td>@Html.Label("txtusername", @Model.username)</td>
+        <td>@Html.TextBox("txtusername", @Model.username, new { @readonly = "readonly", @hidden = "hidden" }) @Html.Label("lbusername", @Model.username)</td>
         </tr><tr>
         <td class="content-right-item-td">Mật khẩu:</td>
         <td>@Html.Password("txtpassword", @Model.password)</td>
@@ -26,7 +26,7 @@
         <td class="content-right-item-td">Giới tính nam:</td>
         <td>
             <select name="txtgioitinh">
-            @if(ViewBag.gioitinh == "True")
+            @if (@Model.gioitinhnam == true)
             {
                 <option selected="selected" value="nam">Nam</option>
                 <option value="nu">Nữ</option>
@@ -58,7 +58,7 @@
         <td>@Html.TextBox("txtemail", @Model.email)</td>
         </tr><tr>
         <td>Quyền hạng: </td>
-        <td>@Html.Label("txtquyenhang", @Model.quyenhang)</td>
+        <td>@Html.TextBox("txtquyenhang", @Model.quyenhang, new { @readonly = "readonly", @hidden = "hidden" }) @Html.Label("lbquyenhang", @Model.quyenhang)</td>
     </tr>
     <tr>
         <td><input type="submit" name="Insert" value="Lưu"/></td>
