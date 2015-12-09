@@ -7,7 +7,7 @@
 <div>
     <div class="tieude-content">QUẢN LÝ TÀI KHOẢN</div>
     <div class="box-pro-home-profileuser">
-        <p class="content-right-item-p">Pass: XXX</p>
+        <p class="content-right-item-p">Tên đăng nhập: @Html.Raw(Model.username)</p>
         <p class="content-right-item-p">Họ tên: @Html.Raw(Model.hoten)</p>
         <p class="content-right-item-p">Ngày sinh: @Html.Raw(Model.ngaysinh.Value.ToShortDateString())</p>
         <p class="content-right-item-p">Địa chỉ: @Html.Raw(Model.diachi)</p>
@@ -15,7 +15,7 @@
         <p class="content-right-item-p">Quyền: @Html.Raw(Model.quyenhang)</p>
         <p>
             <b style="font-size: 25px;">
-                @Html.ActionLink("Sửa thông tin tài khoản", "EditUser", "Account", new { id = Model.username.Trim(), goitinh = Model.gioitinhnam.ToString(), quyenhang = Model.quyenhang }, null)
+                @Html.ActionLink("Sửa thông tin tài khoản", "EditUser", "Account", new { id = Model.username.Trim() }, null)
             </b>
         </p>
     </div>

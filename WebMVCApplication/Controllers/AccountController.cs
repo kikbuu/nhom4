@@ -173,10 +173,8 @@ namespace WebMVCApplication.Controllers
         #endregion
         //Sửa thông tin tài khoản
         #region[Edit User]
-        public ActionResult EditUser(string id, string goitinh, string quyenhang)
+        public ActionResult EditUser(string id)
         {
-            ViewBag.gioitinh = goitinh;
-            ViewBag.quyenhang = quyenhang;
             return View(db.findUser(id));
         }
         [HttpPost]
